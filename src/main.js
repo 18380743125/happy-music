@@ -8,6 +8,7 @@ import '@/assets/scss/index.scss'
 import lazyPlugin from 'vue3-lazy'
 // 自定义 loading 指令
 import loadingDirective from '@/components/base/loading/directive'
+import noResultDirective from '@/components/base/noResult/directive'
 
 const app = createApp(App)
 
@@ -19,5 +20,7 @@ app.use(lazyPlugin, {
 
 // 注册自定义 loading 加载指令
 app.directive('loading', loadingDirective)
+// 注册 noResult 指令
+app.directive('no-result', noResultDirective)
 
 app.use(store).use(router).mount('#app')
